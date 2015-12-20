@@ -10,7 +10,17 @@
   <form action = "{{ url_for('newMenuItem', restaurant_id = restaurant.id)}}", method = 'post'>
     <p> Item: </p>
     <input type = 'text' size = '30' name = 'name' placeholder="Item name">
+
+    <p> Description: </p>
+    <input type = 'text' size = '30' name = 'description' placeholder="Item description">
+
+    <p> Price: </p>
+    <input type = 'text' size = '5' name = 'price' placeholder="Item price">
+
+    <p>
+
     <input type = 'submit' value = 'Create'>
+
     <a href = '{{url_for('showMenu', restaurant_id = restaurant.id)}}'> Cancel </a>
   </form>
 

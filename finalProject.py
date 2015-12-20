@@ -65,7 +65,7 @@ def showMenu(restaurant_id):
 def newMenuItem(restaurant_id):
     restaurant = session.query(Restaurant).filter_by(id = restaurant_id).one()
     if request.method == 'POST':
-        newItem = MenuItem(name = request.form['name'], restaurant_id = restaurant.id)
+        newItem = MenuItem(name = request.form['name'], restaurant_id = restaurant.id, description = request.form['description'], price = request.form['price'])
         session.add(newItem)
         session.commit()
         flash_string = "%s has been added to the menu" % newItem.name
