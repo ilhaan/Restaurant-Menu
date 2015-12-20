@@ -1,0 +1,8 @@
+Notes:
+======
+
+finalProject.py - run this to see fully working webserver with webapges and API endpoints
+
+project.py - was used while going through course. may not work correctly now since changes were made to dependencies for finalProject.py
+
+project_json.py - used while learning jsonify etc. 
