@@ -81,6 +81,10 @@ def editMenuItem(menu_id, restaurant_id):
     if request.method == 'POST':
         if request.form['name']:
             editedItem.name = request.form['name']
+        if request.form['description']:
+            editedItem.description = request.form['description']
+        if request.form['price']:
+            editedItem.price = request.form['price']
         session.add(editedItem)
         session.commit()
         flash_string = "%s has been edited" % editedItem.name
