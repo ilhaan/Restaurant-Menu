@@ -10,7 +10,7 @@
 
   <div id="signinButton">
     <span class="g-signin"
-      data-scope="openid"
+      data-scope="openid email"
       data-clientid="8692793325-jl2tlivvspcffpn6s3de5cd608oet6v8.apps.googleusercontent.com"
       data-redirecturi="postmessage"
       data-accesstype="offline"
@@ -37,7 +37,7 @@
           if (result) {
             $('#result').html('Login Successful!</br>' + result + '</br> Redirecting...')
             setTimeout(function() {
-              window.location.href = "/restaurant";
+              window.location.href = "/restaurant/";
             }, 4000);
           } else if (authResult['error']){
             console.log('There was an error: ' + authResult['error']);
